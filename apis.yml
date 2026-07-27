@@ -1,8 +1,13 @@
 aid: flease
 name: Flease
-description: 'Flease is a company surfaced as a portfolio company of partech and added to the API Evangelist
-  network as a stub for enrichment. Sector: Marketplace. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Flease is a French vehicle-leasing marketplace offering flexible long-term (LLD, 24-50
+  month) and medium-term (LMD, 1-12 month) car and utility-vehicle rental to SMEs and small businesses.
+  It sources quasi-new vehicles (under two years old, fewer than 30,000 km), delivers within a week
+  for LMD and a month for LLD, and bundles a fleet-management web application (webapp.flease.fr) for
+  tracking mileage, drivers, maintenance, contracts, and invoices. Flease positions on transparent
+  pricing and a roughly 20% lower total cost of ownership versus traditional leasing, with a circular-economy
+  angle of redeploying used vehicles. Backed by Partech. No public developer API or documentation is
+  published; the customer-facing webapp is a Vue single-page app authenticated with AWS Cognito.'
 url: https://raw.githubusercontent.com/api-evangelist/flease/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +15,29 @@ x-backed-by:
 - partech
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.flease.fr/img/icons/favicon.ico
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Marketplace
+- Automotive
+- Vehicle Leasing
+- Fleet Management
+- Mobility
+- France
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +45,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/flease-domain-security.yml
 - type: Website
   url: https://www.flease.fr/
+- type: Login
+  url: https://webapp.flease.fr/
+- type: Blog
+  url: https://www.flease.fr/blog
+- type: Support
+  url: https://www.flease.fr/faq
+- type: PrivacyPolicy
+  url: https://www.flease.fr/legal/politique-de-confidentialite
+- type: TermsOfService
+  url: https://www.flease.fr/legal/conditions-generales-dutilisation
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
